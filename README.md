@@ -1,34 +1,34 @@
 # AI Product Validator
 
-一个 Claude Code Skill：用户输入产品需求/想法后，先理性判断"这个需求值不值得做"，而不是直接帮用户做产品。
+A Claude Code skill: when a user describes a product requirement or idea, it first rationally evaluates "is this worth building" instead of jumping straight to building the product.
 
-## 安装
+## Install
 
-克隆到个人 skills 目录：
+Clone into your personal skills directory:
 
 ```powershell
 git clone https://github.com/yanyanwu458-png/ai-product-validator.git "$env:USERPROFILE\.claude\skills\ai-product-validator"
 ```
 
-Linux / macOS：
+Linux / macOS:
 
 ```bash
 git clone https://github.com/yanyanwu458-png/ai-product-validator.git ~/.claude/skills/ai-product-validator
 ```
 
-## 使用
+## Usage
 
-直接描述你的产品想法即可触发诊断，或输入：
+Describe your product idea and it will trigger the diagnosis, or run:
 
 ```
-/ai-product-validator 你的产品想法
+/ai-product-validator your product idea
 ```
 
-## 输出
+## Output
 
-固定格式：`【结论】` / `【理由】` / `【判断】` / `【方向】`，每次回答尽量控制在 150 字以内。
+Fixed format: `【Conclusion】` / `【Reasons】` / `【Verdict】` / `【Direction】`, keeping each answer under ~150 characters where possible.
 
-## 结构与扩展
+## Structure & Extending
 
-- 8 个分析维度，逐条核对。
-- 扩展新维度：在 `SKILL.md` 的「分析维度」列表新增一行、编号递增即可；若新维度影响结论，需同步写进【理由】。
+- 8 analysis dimensions, checked one by one.
+- To add a dimension: append a numbered line to the "分析维度" list in `SKILL.md`; if it affects the verdict, also reflect it in the Reasons.
